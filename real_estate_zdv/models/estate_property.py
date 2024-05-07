@@ -5,7 +5,7 @@ from dateutil.relativedelta import relativedelta
 from odoo import models, fields
 
 class EstateProperty(models.Model):
-    _name = "estate_property"
+    _name = "estate.property"
     _description = "ZDV Estate Property (training model)"
 
     name = fields.Char('Name', required = True)
@@ -38,3 +38,7 @@ class EstateProperty(models.Model):
                      default = 'new',
                      required = True,
                      copy = False)
+    property_type_id = fields.Many2one("property.type", string="Type")
+
+    buyers_id = fields.Many2one("res.partner", string="Buyer")
+    salesmans_id = fields.Many2one("res.users", string="Salesman")

@@ -2,13 +2,13 @@
 <odoo>
     <record id="estate_property_action" model="ir.actions.act_window">
         <field name="name">Estate Property</field>
-        <field name="res_model">estate_property</field>
+        <field name="res_model">estate.property</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <record id="estate_property_view_tree" model="ir.ui.view">
-        <field name="name">estate_property.tree</field>
-        <field name="model">estate_property</field>
+        <field name="name">estate.property.tree</field>
+        <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <tree string="Estate Property">
                 <field name="name"/>
@@ -23,8 +23,8 @@
     </record>
 
     <record id="estate_property_view_form" model="ir.ui.view">
-        <field name="name">estate_property.form</field>
-        <field name="model">estate_property</field>
+        <field name="name">estate.property.form</field>
+        <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <form string="Estate Property Form">
                 <header>
@@ -55,6 +55,13 @@
                                     <field name="garden"/>
                                     <field name="garden_area"/>
                                     <field name="garden_orientation"/>
+                                    <field name="property_type_id"/>
+                                </group>
+                            </page>
+                            <page string="Details">
+                                <group>
+                                    <field name="salesmans_id"/>
+                                    <field name="buyers_id"/>
                                 </group>
                             </page>
                         </notebook>
@@ -65,8 +72,8 @@
     </record>
 
     <record id="estate_property_search" model="ir.ui.view">
-        <field name="name">estate_property.search</field>
-        <field name="model">estate_property</field>
+        <field name="name">estate.property.search</field>
+        <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <search string="SearchX">
                 <field name="name"/>
