@@ -34,6 +34,7 @@
                     <h1>
                         <field name="name"/>
                     </h1>
+                    <field name="tags" widget="many2many_tags"/>
                     <group>
                         <group>
                             <field name="postcode"/>
@@ -58,7 +59,12 @@
                                     <field name="property_type_id"/>
                                 </group>
                             </page>
-                            <page string="Details">
+                            <page string="Offers">
+                                <group>
+                                    <field name="offer_ids"/>
+                                </group>
+                            </page>
+                            <page string="Other Info">
                                 <group>
                                     <field name="salesmans_id"/>
                                     <field name="buyers_id"/>
